@@ -4,7 +4,14 @@ dynamic = ["version"]
 description = "MapTrix - A Python implemnentation of Geo library for map data processing and computation, including geospatial calculations, map data manipulation, and spatial analysis tools."
 readme = "README.md"
 requires-python = ">=3.9"
-dependencies = []
+authors = [
+    { name = "Aman Ranjan", email = "aman.ranjan@mapmyindia.com"}
+]
+
+dependencies = [
+    "cython>=3.2.4",
+    "setuptools>=82.0.0",
+]
 
 [tool.setuptools]
     package-dir = {"" = "src"}
@@ -13,10 +20,13 @@ dependencies = []
     where = ["src"]
 
 [build-system]
-    requires = ["setuptools", "wheel"]
+    requires = ["setuptools", "wheel", "cython"]
     build-backend = "setuptools.build_meta"
-
-
 
 [tool.setuptools.dynamic]
     version = {attr = "maptrix.__version__"}
+
+[tool.cibuildwheel]
+    build = "cp39-* cp310-* cp311-* cp312-* cp313-* cp314-*"
+    skip = "pp*"
+
