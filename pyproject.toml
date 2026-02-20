@@ -9,8 +9,6 @@ authors = [
 ]
 
 dependencies = [
-    "cython>=3.2.4",
-    "setuptools>=82.0.0",
 ]
 
 [tool.setuptools]
@@ -23,6 +21,13 @@ dependencies = [
     requires = ["setuptools", "wheel", "cython"]
     build-backend = "setuptools.build_meta"
 
+[dependency-groups]
+dev = [
+    "cibuildwheel>=2.23.3",
+    "cython>=3.2.4",
+    "setuptools>=82.0.0",
+]
+
 [tool.setuptools.dynamic]
     version = {attr = "maptrix.__version__"}
 
@@ -30,3 +35,5 @@ dependencies = [
     build = "cp39-* cp310-* cp311-* cp312-* cp313-* cp314-*"
     skip = "pp*"
 
+[tool.cibuildwheel.linux]
+    manylinux-x86_64-image = "manylinux_2_28"
