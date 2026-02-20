@@ -1,0 +1,22 @@
+[project]
+name = "maptrix"
+dynamic = ["version"]
+description = "MapTrix - A Python implemnentation of Geo library for map data processing and computation, including geospatial calculations, map data manipulation, and spatial analysis tools."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.setuptools]
+    package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+    where = ["src"]
+
+[build-system]
+    requires = ["setuptools", "wheel"]
+    build-backend = "setuptools.build_meta"
+
+
+
+[tool.setuptools.dynamic]
+    version = {attr = "maptrix.__version__"}
