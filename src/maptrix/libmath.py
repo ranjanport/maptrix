@@ -35,12 +35,14 @@ class Coord2PointXY:
     def get_tile_id(self, level: int) -> int: ...
 
     def get_tile_id(self, level: int | None = None) -> int:
-        mcode = MortonCode()
         nds_coord = self.to_nds_coordinate
-        mcode.from_nds_coordinates(nds_coord.long, nds_coord.lat)
+        mcode = MortonCode(MortonCode.from_nds_coordinates(nds_coord.long, nds_coord.lat))
         if level is None:
-            return mcode.get_tile_id()
-        return mcode.get_tile_id(level=level)
+            tile = PackedTileId.from_morton_and_level(mcode, 13).value
+            return tile
+        else:
+            tile = PackedTileId.from_morton_and_level(mcode, level).value
+            return tile
 
 
 @dataclass

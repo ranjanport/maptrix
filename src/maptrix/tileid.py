@@ -153,7 +153,7 @@ class PackedTileId:
         n_y = y_coord >> n_level
 
         # Create morton code from tile coordinates
-        temp = MortonCode.from_nds_coordinates(n_x, n_y)
+        temp = MortonCode(MortonCode().from_nds(n_x, n_y))
 
         # Calculate packed tile ID value
         value = temp.value() + (1 << (16 + level))
