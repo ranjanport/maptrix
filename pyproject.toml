@@ -17,7 +17,6 @@ classifiers = [
     "Programming Language :: Python :: 3.14",
     "Programming Language :: Python :: 3.15",
     "Development Status :: 5 - Production/Stable",
-    "License::Other/Proprietary License",
     "Operating System :: OS Independent"
 ]
 
