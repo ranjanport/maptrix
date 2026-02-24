@@ -1,11 +1,24 @@
 [project]
 name = "maptrix"
 dynamic = ["version"]
-description = "MapTrix - A Python implemnentation of Geo library for map data processing and computation, including geospatial calculations, map data manipulation, and spatial analysis tools."
+description = """MapTrix - A Python implemnentation of Geo library for map data processing and computation,
+including geospatial calculations, map data manipulation, and spatial analysis tools."""
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [
     { name = "Aman Ranjan", email = "er.amanranjan@gmail.com"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Development Status :: 5 - Production/Stable",
+    "License::Other/Proprietary License",
+    "Operating System :: OS Independent"
 ]
 
 dependencies = [
