@@ -5,7 +5,7 @@ description = "MapTrix - A Python implemnentation of Geo library for map data pr
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [
-    { name = "Aman Ranjan", email = "aman.ranjan@mapmyindia.com"}
+    { name = "Aman Ranjan", email = "er.amanranjan@gmail.com"}
 ]
 
 dependencies = [
