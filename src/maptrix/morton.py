@@ -82,12 +82,3 @@ class MortonCode:
 
     def __str__(self):
         return f"MortonCode(value={self.morton_code})"
-
-    def get_tile_id(self, level: int = 13) -> int:
-        """
-        Get Tile ID from morton code at the given level
-        :param level:
-        :return: int
-        """
-        move_count = 63 - (2 * level + 1)
-        return self.morton_code >> move_count | (0x01 << (16 + level))
