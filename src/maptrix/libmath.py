@@ -135,8 +135,7 @@ class CoordinateMath:
         ref_point: Coord2PointXY,
         coordinate_shift: int = None,
     ):
-        """
-        Snapping here means referencing and judging the coordinate offset from the reference point.
+        """Description : Snapping here means referencing and judging the coordinate offset from the reference point.
         This ensures that the difference encoding between point and ref_point is non-Zero
         to ensure the point is not redundant.
 
@@ -144,17 +143,17 @@ class CoordinateMath:
         we'll exclude that point from the encoding.
 
         Snapping works in a way that the first node of a given segment is referenced
-         from the tile center of the respective tile on which it lies. Then the next nodes are
-         referenced from the previous node, resulting in smaller offset values.
+        from the tile center of the respective tile on which it lies. Then the next nodes are
+        referenced from the previous node, resulting in smaller offset values.
 
-         In the process there is a coordinate shift that is applied to ensure that the offset values are
-         within a certain range. This also causes the point resolution to be reduced, and a little coefficient
-          difference variation from actual is occurred.
+        In the process there is a coordinate shift that is applied to ensure that the offset values are
+        within a certain range. This also causes the point resolution to be reduced, and a little coefficient
+        difference variation from actual is occurred.
 
-        :param coordinate_shift:
-        :param point:
-        :param ref_point:
-        :return:
+        Args:
+            point (Coord2PointXY): WGS84 Coordinates
+            ref_point (Coord2PointXY): Reference WGS84 Coordinates
+            coordinate_shift (int, optional): Coordinate shift. Defaults to 3.
         """
         pos = self.WGS2NDS(point)
         pos1 = Maths.subtract(pos, ref_point)
@@ -170,15 +169,14 @@ class CoordinateMath:
         ref_point: Coord2PointXY,
         coordinate_shift: int = None,
     ):
-        """
-        To overcome the snapping effect, the offset values are multiplied by a coefficient and added to the reference point.
+        """Description : To overcome the snapping effect, the offset values are multiplied by a coefficient
+         and added to the reference point. This provides the actual position post-shift is applied to the coordinate offset.
+         This has to be applied on all nodes that are being referenced from the previous one.
 
-        This provides the actual position post-shift is applied to the coordinate offset.
-        This has to be applied on all nodes that are being referenced from the previous one.
-        :param coordinate_shift:
-        :param point:
-        :param ref_point:
-        :return:
+        Args:
+            point (Coord2PointXY): WGS84 Coordinates
+            ref_point (Coord2PointXY): Reference WGS84 Coordinates
+            coordinate_shift (int, optional): Coordinate shift. Defaults to 3.
         """
         if coordinate_shift is None:
             return self.NDS2WGS(
@@ -216,15 +214,17 @@ class TileMath:
     def get_tile_content_index(
         cls, south_west_tile: int, num_rows: int, num_cols: int, tiles: list[int]
     ):
-        """
-        This evaluates the tile content index for a grid of tiles starting from the south-west tile.
+        """Description : This evaluates the tile content index for a grid of tiles starting from the south-west tile.
         It returns a list indicating the presence (1) or absence (0) of tiles in the specified area.
-        :param south_west_tile:
-        :param num_rows:
-        :param num_cols:
-        :param tiles:
-        :return:
-        :author: Originally Designed by @Prashant, In guidance with @Aman
+
+        Args:
+            south_west_tile (int): The tile ID of the south-west corner of the area.
+            num_rows (int): The number of rows in the area.
+            num_cols (int): The number of columns in the area.
+            tiles (list[int]): A list of tile IDs representing the tiles to be included in the index.
+
+        Returns:
+            Tile content index (list): A list of 1s and 0s indicating the presence (1) or absence (0) of tiles.
         """
         south_west_tile = PackedTileId(south_west_tile)
         tile_content_index = []
