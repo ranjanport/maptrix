@@ -1,7 +1,7 @@
 [project]
 name = "maptrix"
 dynamic = ["version"]
-description = """MapTrix - A Python implemnentation of Geo library for map data processing and computation,
+description = """MapTrix - A Python implementation of Geo library for map data processing and computation,
 including geospatial calculations, map data manipulation, and spatial analysis tools."""
 readme = "README.md"
 requires-python = ">=3.9"
@@ -34,10 +34,17 @@ dependencies = [
     build-backend = "setuptools.build_meta"
 
 [dependency-groups]
-dev = [
-    "cibuildwheel>=2.23.3",
-    "cython>=3.2.4",
-    "setuptools>=82.0.0",
+    dev = [
+        "cibuildwheel>=2.23.3",
+        "cython>=3.2.4",
+        "setuptools>=82.0.0",
+    ]
+    docs = [
+        "myst-parser>=3.0.1",
+        "sphinx>=7.4.7",
+        "sphinx-autodoc-typehints>=2.3.0",
+        "sphinx-rtd-theme>=3.1.0",
+        "sphinxcontrib-napoleon>=0.7",
 ]
 
 [tool.setuptools.dynamic]
