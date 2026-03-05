@@ -369,3 +369,5 @@ uv.lock
 
 # Configs
 config/
+tests/output/*
+tests/resources/*
