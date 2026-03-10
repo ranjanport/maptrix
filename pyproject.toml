@@ -4,12 +4,11 @@ dynamic = ["version"]
 description = """MapTrix - A Python implementation of Geo library for map data processing and computation,
 including geospatial calculations, map data manipulation, and spatial analysis tools."""
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 authors = [
     { name = "Aman Ranjan", email = "er.amanranjan@gmail.com"}
 ]
 classifiers = [
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -22,8 +21,6 @@ classifiers = [
 
 dependencies = [
     "dotenv>=0.9.9",
-    "gdal==3.11",
-    "pytest>=8.4.2",
 ]
 
 [tool.setuptools]
@@ -40,7 +37,7 @@ dependencies = [
     dev = [
         "cibuildwheel>=2.23.3",
         "cython>=3.2.4",
-        "setuptools>=82.0.0",
+        "setuptools>=82.0.1",
     ]
     docs = [
         "myst-parser>=3.0.1",
@@ -54,7 +51,7 @@ dependencies = [
     version = {attr = "maptrix.__version__"}
 
 [tool.cibuildwheel]
-    build = "cp39-* cp310-* cp311-* cp312-* cp313-* cp314-*"
+    build = "cp310-* cp311-* cp312-* cp313-* cp314-*"
     skip = "pp*"
 
 [tool.cibuildwheel.linux]

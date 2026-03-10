@@ -17,26 +17,29 @@ pkg_path = packages[0]
 pkg_name = pkg_path.name
 
 # Auto-discover modules except __init__.py
-modules = [p.stem for p in pkg_path.glob("*.py") if p.stem != "__init__"]
+py_files = [
+    p for p in pkg_path.rglob("*.py")
+    if p.name != "__init__.py"
+]
 
 extensions = [
     Extension(
-        f"{pkg_name}.{m}",
-        [str(pkg_path / f"{m}.py")],
+        ".".join(p.with_suffix("").relative_to(SRC_ROOT).parts),
+        [str(p)],
         extra_compile_args=["-O3"],
     )
-    for m in modules
+    for p in py_files
 ]
 
 
 # Custom build_py: copy ONLY __init__.py
 class build_py(_build_py):
     def run(self):
-        self.mkpath(self.build_lib + f"/{pkg_name}")
-        self.copy_file(
-            str(pkg_path / "__init__.py"),
-            self.build_lib + f"/{pkg_name}/__init__.py",
-        )
+        for init in pkg_path.rglob("__init__.py"):
+            rel = init.relative_to(SRC_ROOT)
+            dst = Path(self.build_lib) / rel
+            dst.parent.mkdir(parents=True, exist_ok=True)
+            self.copy_file(str(init), str(dst))
 
 
 setup(
