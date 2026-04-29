@@ -714,7 +714,9 @@ def get_tile_ids_for_bounding_box(sw_x, sw_y, ne_x, ne_y, level):
             tile_sw_y = tile_y * tile_size
 
             # Create morton code from the tile's south-west corner
-            morton = MortonCode.from_nds_coordinates(tile_sw_x, tile_sw_y)
+            morton = MortonCode(
+                morton_code=MortonCode.from_nds_coordinates(tile_sw_x, tile_sw_y)
+            )
 
             # Create the packed tile ID
             tile_id = PackedTileId.from_morton_and_level(morton, level)
