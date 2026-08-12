@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>maptrix.libmath module &mdash; maptrix v0.3.2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=6b93ccbd"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            maptrix
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">maptrix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">maptrix</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">maptrix.libmath module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-maptrix.libmath">
+<span id="maptrix-libmath-module"></span><h1>maptrix.libmath module<a class="headerlink" href="#module-maptrix.libmath" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="maptrix.libmath.AdasV2">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">maptrix.libmath.</span></span><span class="sig-name descname"><span class="pre">AdasV2</span></span><a class="headerlink" href="#maptrix.libmath.AdasV2" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.libmath.AdasV2.get_encoded_curvature">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">get_encoded_curvature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curvature</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.libmath.AdasV2.get_encoded_curvature" title="Link to this definition"></a></dt>
+<dd><p>Description : Encode the curvature value as per NDS specification and return the encoded value.</p>
+<p>Args: curvature (float): Curvature value.</p>
+<p>Returns: int: Encoded curvature value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="maptrix.libmath.Coord2PointXY">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">maptrix.libmath.</span></span><span class="sig-name descname"><span class="pre">Coord2PointXY</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">long</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.libmath.Coord2PointXY" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Convert WGS84 to Point_X_Y Coordinates or NDS to Point_X_Y Coordinates</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.libmath.Coord2PointXY.get_tile_id">
+<span class="sig-name descname"><span class="pre">get_tile_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.libmath.Coord2PointXY.get_tile_id" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="maptrix.libmath.Coord2PointXY.lat">
+<span class="sig-name descname"><span class="pre">lat</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#maptrix.libmath.Coord2PointXY.lat" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="maptrix.libmath.Coord2PointXY.long">
+<span class="sig-name descname"><span class="pre">long</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#maptrix.libmath.Coord2PointXY.long" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="maptrix.libmath.Coord2PointXY.to_Coord2PointXYZ">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">to_Coord2PointXYZ</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#maptrix.libmath.Coord2PointXYZ" title="maptrix.libmath.Coord2PointXYZ"><span class="pre">Coord2PointXYZ</span></a></span><a class="headerlink" href="#maptrix.libmath.Coord2PointXY.to_Coord2PointXYZ" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="maptrix.libmath.Coord2PointXY.to_nds_coordinate">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">to_nds_coordinate</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#maptrix.libmath.Coord2PointXY" title="maptrix.libmath.Coord2PointXY"><span class="pre">Coord2PointXY</span></a></span><a class="headerlink" href="#maptrix.libmath.Coord2PointXY.to_nds_coordinate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="maptrix.libmath.Coord2PointXY.to_wgs84_coordinate">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">to_wgs84_coordinate</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#maptrix.libmath.Coord2PointXY" title="maptrix.libmath.Coord2PointXY"><span class="pre">Coord2PointXY</span></a></span><a class="headerlink" href="#maptrix.libmath.Coord2PointXY.to_wgs84_coordinate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="maptrix.libmath.Coord2PointXYZ">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">maptrix.libmath.</span></span><span class="sig-name descname"><span class="pre">Coord2PointXYZ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">long</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.libmath.Coord2PointXYZ" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#maptrix.libmath.Coord2PointXY" title="maptrix.libmath.Coord2PointXY"><code class="xref py py-class docutils literal notranslate"><span class="pre">Coord2PointXY</span></code></a></p>
+<p>Convert WGS84 to Point_X_Y_Z Coordinates or NDS to Point_X_Y_Z Coordinates</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="maptrix.libmath.Coord2PointXYZ.height">
+<span class="sig-name descname"><span class="pre">height</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#maptrix.libmath.Coord2PointXYZ.height" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="maptrix.libmath.CoordinateMath">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">maptrix.libmath.</span></span><span class="sig-name descname"><span class="pre">CoordinateMath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinate_shift</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.libmath.CoordinateMath" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.libmath.CoordinateMath.NDS2WGS">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">NDS2WGS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.libmath.CoordinateMath.NDS2WGS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.libmath.CoordinateMath.WGS2NDS">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">WGS2NDS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.libmath.CoordinateMath.WGS2NDS" title="Link to this definition"></a></dt>
+<dd><p>Description : Convert WGS84 to NDS Coordinates and return the NDS Coordinates
+:param position: WGS84 Coordinates
+:type position: <span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#maptrix.libmath.Coord2PointXY" title="maptrix.libmath.Coord2PointXY"><code class="xref py py-class docutils literal notranslate"><span class="pre">Coord2PointXY</span></code></a></span>
+:returns: NDS Coordinates with keys ‘x’ and ‘y’
+:rtype: Coord2PointXY</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.libmath.CoordinateMath.get_tile_center">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">get_tile_center</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tileId</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.libmath.CoordinateMath.get_tile_center" title="Link to this definition"></a></dt>
+<dd><p>Description : Returns two values, the x and y coordinates of the tile center
+:param tileId: Tile ID
+:type tileId: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>
+:returns: Center coordinates with keys ‘x’ and ‘y’
+:rtype: Coord2PointXY</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.libmath.CoordinateMath.latitude_isvalid">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">latitude_isvalid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.libmath.CoordinateMath.latitude_isvalid" title="Link to this definition"></a></dt>
+<dd><p>Check if the latitude is valid (-90 to 90 degrees)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.libmath.CoordinateMath.longitude_isvalid">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">longitude_isvalid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lng</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.libmath.CoordinateMath.longitude_isvalid" title="Link to this definition"></a></dt>
+<dd><p>Check if longitude is valid (-180 to 180 degrees)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.libmath.CoordinateMath.snap">
+<span class="sig-name descname"><span class="pre">snap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_point</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coordinate_shift</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.libmath.CoordinateMath.snap" title="Link to this definition"></a></dt>
+<dd><p>Description : Snapping here means referencing and judging the coordinate offset from the reference point.
+This ensures that the difference encoding between point and ref_point is non-Zero
+to ensure the point is not redundant.</p>
+<p>If a point is redundant, the offset values will be exactly 0,0 and in the case where the offset becomes 0,
+we’ll exclude that point from the encoding.</p>
+<p>Snapping works in a way that the first node of a given segment is referenced
+from the tile center of the respective tile on which it lies. Then the next nodes are
+referenced from the previous node, resulting in smaller offset values.</p>
+<p>In the process there is a coordinate shift that is applied to ensure that the offset values are
+within a certain range. This also causes the point resolution to be reduced, and a little coefficient
+difference variation from actual is occurred.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>point</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#maptrix.libmath.Coord2PointXY" title="maptrix.libmath.Coord2PointXY"><code class="xref py py-class docutils literal notranslate"><span class="pre">Coord2PointXY</span></code></a></span>) – WGS84 Coordinates</p></li>
+<li><p><strong>ref_point</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#maptrix.libmath.Coord2PointXY" title="maptrix.libmath.Coord2PointXY"><code class="xref py py-class docutils literal notranslate"><span class="pre">Coord2PointXY</span></code></a></span>) – Reference WGS84 Coordinates</p></li>
+<li><p><strong>coordinate_shift</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – Coordinate shift. Defaults to 3.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.libmath.CoordinateMath.unsnap">
+<span class="sig-name descname"><span class="pre">unsnap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_point</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coordinate_shift</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.libmath.CoordinateMath.unsnap" title="Link to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Description<span class="classifier">To overcome the snapping effect, the offset values are multiplied by a coefficient</span></dt><dd><p>and added to the reference point. This provides the actual position post-shift is applied to the coordinate offset.
+This has to be applied on all nodes that are being referenced from the previous one.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>point</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#maptrix.libmath.Coord2PointXY" title="maptrix.libmath.Coord2PointXY"><code class="xref py py-class docutils literal notranslate"><span class="pre">Coord2PointXY</span></code></a></span>) – WGS84 Coordinates</p></li>
+<li><p><strong>ref_point</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#maptrix.libmath.Coord2PointXY" title="maptrix.libmath.Coord2PointXY"><code class="xref py py-class docutils literal notranslate"><span class="pre">Coord2PointXY</span></code></a></span>) – Reference WGS84 Coordinates</p></li>
+<li><p><strong>coordinate_shift</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – Coordinate shift. Defaults to 3.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="maptrix.libmath.Maths">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">maptrix.libmath.</span></span><span class="sig-name descname"><span class="pre">Maths</span></span><a class="headerlink" href="#maptrix.libmath.Maths" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.libmath.Maths.add">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.libmath.Maths.add" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.libmath.Maths.divide">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">divide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.libmath.Maths.divide" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.libmath.Maths.max_bits">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">max_bits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.libmath.Maths.max_bits" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.libmath.Maths.multiply">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">multiply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.libmath.Maths.multiply" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.libmath.Maths.offset_bits">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">offset_bits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.libmath.Maths.offset_bits" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.libmath.Maths.subtract">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">subtract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.libmath.Maths.subtract" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.libmath.Maths.widen">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">widen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.libmath.Maths.widen" title="Link to this definition"></a></dt>
+<dd><p>Widen a 32-bit value to 64 bits by interleaving zeros</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="maptrix.libmath.TileMath">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">maptrix.libmath.</span></span><span class="sig-name descname"><span class="pre">TileMath</span></span><a class="headerlink" href="#maptrix.libmath.TileMath" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.libmath.TileMath.get_tile_content_index">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">get_tile_content_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">south_west_tile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_cols</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tiles</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.libmath.TileMath.get_tile_content_index" title="Link to this definition"></a></dt>
+<dd><p>Description : This evaluates the tile content index for a grid of tiles starting from the south-west tile.
+It returns a list indicating the presence (1) or absence (0) of tiles in the specified area.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>south_west_tile</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – The tile ID of the south-west corner of the area.</p></li>
+<li><p><strong>num_rows</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – The number of rows in the area.</p></li>
+<li><p><strong>num_cols</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – The number of columns in the area.</p></li>
+<li><p><strong>tiles</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]</span>) – A list of tile IDs representing the tiles to be included in the index.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of 1s and 0s indicating the presence (1) or absence (0) of tiles.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tile content index (list)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Aman Ranjan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

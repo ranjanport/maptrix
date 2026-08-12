@@ -1,0 +1,230 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>maptrix.bounding_box module &mdash; maptrix v0.3.2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=6b93ccbd"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            maptrix
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">maptrix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">maptrix</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">maptrix.bounding_box module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-maptrix.bounding_box">
+<span id="maptrix-bounding-box-module"></span><h1>maptrix.bounding_box module<a class="headerlink" href="#module-maptrix.bounding_box" title="Link to this heading"></a></h1>
+<p>Bounding box utilities for NDS coordinate space.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="maptrix.bounding_box.NdsBoundingBox">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">maptrix.bounding_box.</span></span><span class="sig-name descname"><span class="pre">NdsBoundingBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.bounding_box.NdsBoundingBox" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Axis-aligned bounding box in NDS coordinates (32-bit integers).</p>
+<p>NDS coordinates use integers for fast comparisons:
+- X (longitude): 32-bit signed integer
+- Y (latitude): 31-bit signed integer</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="maptrix.bounding_box.NdsBoundingBox.min_x">
+<span class="sig-name descname"><span class="pre">min_x</span></span><a class="headerlink" href="#maptrix.bounding_box.NdsBoundingBox.min_x" title="Link to this definition"></a></dt>
+<dd><p>SW corner longitude (NDS coordinates)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="maptrix.bounding_box.NdsBoundingBox.min_y">
+<span class="sig-name descname"><span class="pre">min_y</span></span><a class="headerlink" href="#maptrix.bounding_box.NdsBoundingBox.min_y" title="Link to this definition"></a></dt>
+<dd><p>SW corner latitude (NDS coordinates)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="maptrix.bounding_box.NdsBoundingBox.max_x">
+<span class="sig-name descname"><span class="pre">max_x</span></span><a class="headerlink" href="#maptrix.bounding_box.NdsBoundingBox.max_x" title="Link to this definition"></a></dt>
+<dd><p>NE corner longitude (NDS coordinates)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="maptrix.bounding_box.NdsBoundingBox.max_y">
+<span class="sig-name descname"><span class="pre">max_y</span></span><a class="headerlink" href="#maptrix.bounding_box.NdsBoundingBox.max_y" title="Link to this definition"></a></dt>
+<dd><p>NE corner latitude (NDS coordinates)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.bounding_box.NdsBoundingBox.contains">
+<span class="sig-name descname"><span class="pre">contains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.bounding_box.NdsBoundingBox.contains" title="Link to this definition"></a></dt>
+<dd><p>Check if this bbox fully contains another.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#maptrix.bounding_box.NdsBoundingBox" title="maptrix.bounding_box.NdsBoundingBox"><code class="xref py py-class docutils literal notranslate"><span class="pre">NdsBoundingBox</span></code></a></span>) – Another bounding box to check</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if other is completely inside this bbox</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.bounding_box.NdsBoundingBox.from_tile">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">from_tile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.bounding_box.NdsBoundingBox.from_tile" title="Link to this definition"></a></dt>
+<dd><p>Create a bounding box from a tile ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tile</strong> (<span class="sphinx_autodoc_typehints-type">Union[PackedTileId, int]</span>) – PackedTileId object or integer tile ID</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type">NdsBoundingBox</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NdsBoundingBox covering the tile’s area</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.bounding_box.NdsBoundingBox.from_wgs84_corners">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">from_wgs84_corners</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ne</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.bounding_box.NdsBoundingBox.from_wgs84_corners" title="Link to this definition"></a></dt>
+<dd><p>Create a bounding box from WGS84 corner coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sw</strong> (<span class="sphinx_autodoc_typehints-type">Position</span>) – South-west corner as Wgs84 (min longitude, min latitude)</p></li>
+<li><p><strong>ne</strong> (<span class="sphinx_autodoc_typehints-type">Position</span>) – North-east corner as Wgs84 (max longitude, max latitude)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type">NdsBoundingBox</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NdsBoundingBox with corners converted to NDS coordinates</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="maptrix.bounding_box.NdsBoundingBox.intersects">
+<span class="sig-name descname"><span class="pre">intersects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#maptrix.bounding_box.NdsBoundingBox.intersects" title="Link to this definition"></a></dt>
+<dd><p>Check if this bbox intersects (overlaps) with another.</p>
+<p>Two bounding boxes intersect if they share any area.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#maptrix.bounding_box.NdsBoundingBox" title="maptrix.bounding_box.NdsBoundingBox"><code class="xref py py-class docutils literal notranslate"><span class="pre">NdsBoundingBox</span></code></a></span>) – Another bounding box to check against</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if the bounding boxes overlap</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">max_x</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">max_y</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#id1" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">min_x</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">min_y</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#id3" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Aman Ranjan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
