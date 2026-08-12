@@ -33,14 +33,13 @@ dependencies = [
 
 [dependency-groups]
     dev = [
-        "cibuildwheel>=2.23.3",
-        "cython>=3.2.4",
-        "setuptools>=82.0.1",
+        "cibuildwheel<=4.2.0",
+        "cython>=3.2.9",
+        "setuptools>=84.0.0",
     ]
     docs = [
-        "myst-parser>=3.0.1",
+        "myst-parser<=5.1.0",
         "sphinx>=7.4.7",
-        "sphinx-autodoc-typehints>=2.3.0",
         "sphinx-rtd-theme>=3.1.0",
         "sphinxcontrib-napoleon>=0.7",
 ]
